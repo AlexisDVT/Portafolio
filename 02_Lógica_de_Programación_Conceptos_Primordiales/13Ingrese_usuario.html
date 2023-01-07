@@ -1,0 +1,47 @@
+<meta charset="UTF-8">
+
+<h1>PROGRAMA INGRESE USUARIO</h1>
+
+<script>
+
+    function saltarLinea() {
+        document.write("<br>");    
+        document.write("<br>");    
+        document.write("<br>");    
+    }  
+
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+
+    var numCom = 5//Math.round(Math.random()*10)
+    
+
+for (var i = 2; i >= 0; i--) {
+        var inicioDeSesionRegistrado = "alura";
+    var contrasenhaRegistrada = "alura321";
+
+    var inicioDeSesionIngresado = prompt("Ingrese su usuario");
+    var contrasenhaIngresada = prompt("Ingrese su contraseña");
+
+    if( inicioDeSesionRegistrado == inicioDeSesionIngresado && contrasenhaRegistrada == contrasenhaIngresada ) {
+        alert("Bienvenido al sistema " + inicioDeSesionIngresado);
+        i=-5
+    } else {
+        alert("inicio de sesión inválido. Favor intente de nuevo: le quedan " + i + "intentos");
+    }
+
+        
+    }    
+    if (i <= (-5)){
+        imprimir("<br>"+"<br>"+"Acaba de entrar")
+    } else{
+        imprimir("<br>"+"<br>"+"Ya tuvo 3 intentos, lo hemos bloqueado para siempre ever")
+    }
+
+
+</script>
+    
+
+</script>

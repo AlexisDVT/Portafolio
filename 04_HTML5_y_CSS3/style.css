@@ -1,0 +1,56 @@
+body{
+	background: #CCCCCC;
+}
+
+.titulo{
+	padding-left: 30px;
+}
+
+#pok{
+	width: 100%;
+}
+
+.inicio{
+	background: white;
+	padding: 20px;
+}
+
+h1{
+	text-align: center;
+}
+
+p{
+	text-align: center;
+}
+
+em strong{
+	color: red;
+}
+
+#mision{
+	font-size: 20px;
+}
+
+.diferencial{
+	background: white;
+	padding: 10%;
+}
+	
+h2{
+	text-align: center;
+}	
+
+.listas{
+	font-style: italic;
+}
+
+ul{
+	display: inline-block;
+	vertical-align: top;
+	width: 20%;
+	margin-right: 15%;
+}
+
+.pokespick{
+	width: 35%;
+}

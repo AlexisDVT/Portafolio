@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Encriptador de Texto</title>
+
+</head>
+
+<body>
+
+	<div clas="universo"> 
+		
+		<div class="fonLogo">
+			<img class="logopng" src="logo.png">
+		</div>
+
+		<div class="izq">
+			<textarea id="textEncrip"  name="notas" rows="3" placeholder="Ingrese el texto aquí"></textarea>
+		</div>
+
+		<div class="der">
+			<img src="Muñeco.png" id="muñeco">
+			<h1 id="tex1">Ningún mensaje fue encontrado</h1>
+			<h2 id="tex2"> Ingrese el texto que desees encriptar o desencriptar </h2>
+			<textarea name="respuesta" id="textDesencrip" cols="30" rows="10"></textarea>
+			<button type="button" id="botCopy">Copiar</button>
+		</div>
+
+		<div class="letrero">
+			<h1 id="SMYSA">Apenas letras minúsculas y sin acentos</h1>
+		</div>
+
+		<div class="botones">
+			<button type="button" id="botEncrip">Encriptar</button>
+			<button type="button" id="botDesencrip">Desencriptar</button>
+		</div>
+ 		
+ 		<div class="lugar respuesta">
+ 		
+ 		</div>
+
+	</div>
+
+</body>
+
+<script type="text/javascript">
+
+	var ton1 = document.querySelector("#botEncrip");
+	ton1.onclick = encripta;
+
+	var ton2 = document.querySelector("#botDesencrip");
+	ton2.onclick = desencripta;
+
+	var ton3 = document.querySelector("#botCopy");
+	ton3.onclick = cpy; 
+
+
+
+	 function encripta() {
+	 	var oracion = document.getElementById("textEncrip").value.toLowerCase();
+	 	var textEncrip = oracion.replace(/e/img, "enter")
+	 	var textEncrip = textEncrip.replace(/o/img, "ober")
+	 	var textEncrip = textEncrip.replace(/i/img, "imes")
+	 	var textEncrip = textEncrip.replace(/a/img, "ai")
+	 	var textEncrip = textEncrip.replace(/u/img, "ufat")
+	 	document.getElementById("textDesencrip").innerHTML=textEncrip;
+		document.getElementById("textDesencrip").style.display="show"
+	 	document.getElementById("tex1").style.display = "none"; 
+	 	document.getElementById("tex2").style.display = "none"; 
+	 	document.getElementById("botCopy").style.display="show"
+	 	document.getElementById("botCopy").style.display="inhert"
+	 }
+
+	 function desencripta() {
+	 	var oracion = document.getElementById("textEncrip").value.toLowerCase();
+	 	var textEncrip = oracion.replace(/enter/img, "e")
+	 	var textEncrip = textEncrip.replace(/ober/img, "o")
+	 	var textEncrip = textEncrip.replace(/imes/img, "i")
+	 	var textEncrip = textEncrip.replace(/ai/img, "a")
+	 	var textEncrip = textEncrip.replace(/ufat/img, "u")
+	 	document.getElementById("textDesencrip").innerHTML=textEncrip;
+
+	 	document.getElementById("tex1").style.display = "none"; 
+	 	document.getElementById("tex2").style.display = "none"; 
+	 	document.getElementById("botCopy").style.display="show"
+	 	document.getElementById("botCopy").style.display="inhert"
+	 }
+
+	 function cpy() {
+	 		var tex = document.querySelector("#textDesencrip");
+	 		tex.select();
+	 		document.execCommand("copy");
+	 }
+	
+</script>
+
+</html>

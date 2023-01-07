@@ -1,0 +1,52 @@
+<meta charset="UTF-8">
+<h1>Calcular IMC</h1>
+<script>
+    function saltarLinea() {
+        document.write("<br>");    
+        document.write("<br>");    
+        document.write("<br>");
+  
+    }  
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+
+    function calcularIMC(peso,altura){
+        imc = peso /(altura*altura);
+         return(imc);
+         //O se puede:
+         //return (peso /(altura*altura);
+    }
+    nombre = prompt("informe su nombre")
+    peso1 = prompt(nombre + ", informe su peso")
+    altura1 = prompt(nombre + ",informe su altura")
+
+    imcCalculado= calcularIMC(peso1,altura1)
+
+     imprimir(nombre +" tu IMC es de " + imcCalculado);
+  
+    if (imcCalculado<18.5) {
+        imprimir("Estás en los huesos");
+    }
+    if (imcCalculado>=18.5 && imcCalculado<25) {
+        imprimir("Andas Chido");
+    }
+    if (imcCalculado>=25 && imcCalculado<30 ) {
+        imprimir("Sobrepesa: bájale a las gorditas");
+    }
+    if (imcCalculado>=30) {
+        imprimir("Obesidad");
+        if(imcCalculado>=30 && imcCalculado<35){
+            imprimir("Obesidad I: soporta panzona");
+        }
+        if(imcCalculado>=35 && imcCalculado<40){
+            imprimir("Obesidad II: soporta panzona pero x2");
+        }
+        if(imcCalculado>=40){
+            imprimir("Obesidad III: ya párale panzona");
+        }
+    }
+
+
+</script>

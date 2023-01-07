@@ -1,0 +1,21 @@
+<meta charset="UTF-8">
+<h1>Calcular los puntos de futbol</h1>
+<script>
+    function saltarLinea() {
+        document.write("<br>");    
+        document.write("<br>");    
+        document.write("<br>");
+  
+    }  
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+
+    var victorias = prompt("Dinos cuantos partidos ganó: ")
+    var empates= prompt("Dinos cuantos partidos empató: ")
+    var total = (victorias*3)+empates
+
+    imprimir("El total de puntos es: " + total)
+
+</script>

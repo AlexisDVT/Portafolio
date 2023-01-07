@@ -1,0 +1,30 @@
+<meta charset="UTF-8">
+<h1>Calcular los puntos de futbol</h1>
+<script>
+    function saltarLinea() {
+        document.write("<br>");    
+        document.write("<br>");    
+        document.write("<br>");
+  
+    }  
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+
+    var victorias = parseInt(prompt("Informe la cantidad de vitoias"))
+    var empate = parseInt(prompt("Informe la cantidad de empate"))
+    ptsTot= (victorias*3)+empate
+
+    imprimir("Puntos Total: " + ptsTot)
+
+    if (ptsTot>28) {
+        imprimir("EL equipo está mejor");
+    }
+    if (ptsTot<28) {
+        imprimir("EL equipo está peor");
+    }
+    if (ptsTot==28) {
+        imprimir("EL equipo está igual");
+    }
+</script>

@@ -1,0 +1,32 @@
+<meta charset="UTF-8">
+
+<h1>Tabla Multiplicar </h1>
+
+<script>
+
+    function saltarLinea() {
+        document.write("<br>");    
+        document.write("<br>");    
+        document.write("<br>");    
+    }  
+
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+
+    var tabla= parseInt(prompt("Ingrerse la tabla de multiplicar"))
+    var hasta = parseInt(prompt("Ingrerse hasta donde desea multiplicar"))
+    var res 
+    var has=1
+    while(has<=hasta){
+        res=tabla*has;
+        imprimir("While " + res + "=" + tabla + "*" + has);
+        has++
+    }
+
+    for (var has = 1; has<=hasta; has++) {
+        res=tabla*has;
+        imprimir("For " + res + "=" + tabla + "*" + has);
+    }
+</script>

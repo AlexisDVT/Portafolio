@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="style.css">
+	<title>Encriptador de Texto</title>
+</head>
+<body>
+
+	<div class="recuadro">
+			
+		<div class="logo">
+			<img class="logoPng" src="logo.png">
+		</div>
+
+		<div class="izq">
+			<input class="textEncriptado" type="texto" id="textEncrip" placeholder="Ingrese el texto aquí">
+		</div>
+
+		<div class="der">
+			<img src="Muñeco.png" id="muñeco">
+			<h1 id="tex1">Ningún mensaje fue econtrado</h1>
+			<h2 id="tex2"> Ingrese el texto que desees encriptar o desencriptar </h2>
+			<button type="button" id="botCopy">Copiar</button>
+		</div>
+
+		<div class="botones">
+			<h1 id="SMYSA">Sólo minúsculas y son acentos</h1>
+			<button type="button" id="botEncrip">Encriptar</button>
+			<button type="button" id="botDesencrip">Desencriptar</button>
+		</div>
+
+	</div>
+
+
+	<textarea name="respuesta" id="textDesencrip" cols="30" rows="10"> </textarea>
+	
+</body>
+<script>
+	var ton1 = document.querySelector("#botEncrip");
+	ton1.onclick = encripta;
+
+	var ton2 = document.querySelector("#botDesencrip");
+	ton2.onclick = desencripta;
+
+	var ton3 = document.querySelector("#botCopy");
+	ton3.onclick = cpy; 
+
+	 function encripta() {
+	 	var oracion = document.getElementById("textEncrip").value.toLowerCase();
+	 	var textEncrip = oracion.replace(/e/img, "enter")
+	 	var textEncrip = textEncrip.replace(/o/img, "ober")
+	 	var textEncrip = textEncrip.replace(/i/img, "imes")
+	 	var textEncrip = textEncrip.replace(/a/img, "ai")
+	 	var textEncrip = textEncrip.replace(/u/img, "ufat")
+	 	document.getElementById("textDesencrip").innerHTML=textEncrip;
+
+	 	document.getElementById("der").style.display = none;
+	 	document.getElementById("tex1").style.display = none; 
+	 	document.getElementById("tex2").style.display = none; 
+	 }
+
+	 function desencripta() {
+	 	var oracion = document.getElementById("textEncrip").value.toLowerCase();
+	 	var textEncrip = oracion.replace(/enter/img, "e")
+	 	var textEncrip = textEncrip.replace(/ober/img, "o")
+	 	var textEncrip = textEncrip.replace(/imes/img, "i")
+	 	var textEncrip = textEncrip.replace(/ai/img, "a")
+	 	var textEncrip = textEncrip.replace(/ufat/img, "u")
+	 	document.getElementById("textDesencrip").innerHTML=textEncrip;
+	 }
+
+	 function cpy() {
+	 		var tex = document.querySelector("#textDesencrip");
+	 		tex.select();
+	 		document.execCommand("cut");
+	 }
+
+</script>	
+</html>

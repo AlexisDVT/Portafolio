@@ -1,0 +1,31 @@
+<meta charset="UTF-8">
+<h1>Juego de Adivinación</h1>
+<script>
+    function saltarLinea() {
+        document.write("<br>");    
+        document.write("<br>");    
+        document.write("<br>");
+  
+    }  
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+    var numCom = Math.round(Math.random()*10);
+    var numPen = parseInt(prompt("Ingrese un numero del 1 al 5"))
+
+    if (numPen==numCom) {
+        imprimir("Le atinó, puerco")
+    }
+    if (numPen!=numCom) {
+        imprimir("Falló, puerco")   
+    }
+
+   // if (numPen==numCom) {
+   //     imprimir("Le atinó, puerco")
+   // }
+   // else {
+   //     imprimir("Falló, puerco")   
+   // }
+
+</script>

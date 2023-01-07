@@ -1,0 +1,37 @@
+<meta charset="UTF-8">
+
+<h1>PROGRAMA JUEGO DE ADIVINACION </h1>
+
+<script>
+
+    function saltarLinea() {
+        document.write("<br>");    
+        document.write("<br>");    
+        document.write("<br>");    
+    }  
+
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+
+    var numCom = 5//Math.round(Math.random()*10)
+    
+
+for (var i = 2; i >= 0; i--) {
+       var numPen = parseInt(prompt("Ingrese un numero del 1 al 10"))
+       imprimir("Su número es: " + numPen)
+       if (numPen==numCom) {
+        imprimir("Le atinó, puerco")
+        i= -5;
+    }
+    else{
+            imprimir("usted erró")
+            imprimir("Le quedan " + i + " intentos")
+        }
+        
+    }    
+    imprimir("<br>"+"<br>"+"El número era: " + numCom)
+    
+
+</script>

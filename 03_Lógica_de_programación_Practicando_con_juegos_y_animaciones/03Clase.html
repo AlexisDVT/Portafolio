@@ -1,0 +1,48 @@
+<meta charset="utf-8">
+
+<canvas width="600" height="400"> </canvas>
+
+<script>
+	 function Cuadradovede(i,j,color) {
+	 	var pantalla = document.querySelector("canvas");
+		var pincel = pantalla.getContext("2d");
+
+	 	pincel.fillStyle  = color//Propiedad
+	 	pincel.fillRect(i,j,50,50);//Función
+	 	pincel.strokeStyle = "black";
+	 	pincel.strokeRect(i,j,50,50); 	
+	 }
+/*
+	 var i=0;
+	 while(i<600)
+	 {
+		Cuadradovede(i,0,"green");
+		Cuadradovede(i,50,"yellow");
+		Cuadradovede(i,100,"red");
+		i=i+50;	 	
+	 }
+*/
+	 for (var i=0; i<600; i=i+50)
+	 {
+
+		Cuadradovede(i,0,"green");
+		Cuadradovede(i,50,"yellow");
+		Cuadradovede(i,100,"red");
+
+	 }
+
+
+
+
+
+	
+
+
+
+//	 pincel.fillStyle = "blue";
+//	 pincel.beginPath();
+//	 pincel.arc(300,200,50,0,2*3.14);//(Posición del centro, el radio del circulo, angulo de inicio, angulo final)
+
+
+
+</script>

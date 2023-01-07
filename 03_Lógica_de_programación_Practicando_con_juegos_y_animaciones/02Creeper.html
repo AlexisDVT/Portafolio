@@ -1,0 +1,34 @@
+<meta charset="utf-8">
+
+<canvas width="350" height="300"> </canvas>
+
+<script>
+	 var pantalla = document.querySelector("canvas");
+	 var pincel = pantalla.getContext("2d");
+
+	 pincel.fillStyle  = "darkgreen"//Propiedad
+	 pincel.fillRect(0,0,350,300);//Función
+
+	 pincel.fillStyle  = "black"
+	 pincel.fillRect(56,60,90,90);//(donde inicia, donde acaba)
+ 	 pincel.fillStyle  = "black"
+	 pincel.fillRect(202,60,90,90);//(donde inicia, donde acaba)
+	 pincel.fillStyle  = "black"
+	 pincel.fillRect(140,150,70,100);
+
+	 pincel.fillStyle  = "black"
+	 pincel.fillRect(100,220,40,110);
+
+	 pincel.fillStyle  = "black"
+	 pincel.fillRect(210,220,40,110);
+
+
+
+
+//	 pincel.fillStyle = "blue";
+//	 pincel.beginPath();
+//	 pincel.arc(300,200,50,0,2*3.14);//(Posición del centro, el radio del circulo, angulo de inicio, angulo final)
+
+
+
+</script>

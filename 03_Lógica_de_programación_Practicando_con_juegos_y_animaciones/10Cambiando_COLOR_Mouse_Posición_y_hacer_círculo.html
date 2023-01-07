@@ -1,0 +1,40 @@
+<canvas width="600" height="400"> </canvas>
+
+<script>
+
+    var pantalla = document.querySelector("canvas");
+    var pincel = pantalla.getContext("2d");    
+    pincel.fillStyle = "grey";
+    pincel.fillRect(0,0,600,400); 
+    newColor ="blue";
+    pincel.fillStyle = newColor;
+    var i=0;
+
+
+    function dibujarCirculo(evento){
+        var x = evento.pageX - pantalla.offsetLeft;
+        var y = evento.pageY - pantalla.offsetTop;    
+       
+        pincel.beginPath();
+        pincel.arc(x,y,10,0,2*3.14);
+        pincel.fill();
+        console.log(x + "," + y);        
+    }
+
+    pantalla.onclick = dibujarCirculo;
+
+    function alterarColor() {
+        newColor = ["red","green","blue"];
+        pos = newColor[i];
+        pincel.fillStyle = pos;
+        i++;
+        if (i==3) {
+            i=0;
+        }
+        alert("Funcionó");
+        return false;//Para que no aparezca el menú del botón derecho
+    }
+
+    pantalla.oncontextmenu = alterarColor;
+
+</script> 

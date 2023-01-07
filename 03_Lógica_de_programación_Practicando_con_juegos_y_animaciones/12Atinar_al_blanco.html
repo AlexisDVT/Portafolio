@@ -1,0 +1,73 @@
+<canvas width="600" height="400"> </canvas>
+
+<script>
+
+    var pantalla = document.querySelector("canvas");
+    var pincel = pantalla.getContext("2d");    
+    pincel.fillStyle = "lightgrey";
+    pincel.fillRect(0,0,600,400); 
+  
+    function dibCir(x,y,radio,color){
+       pincel.fillStyle= color;
+       pincel.beginPath();
+       pincel.arc(x,y,radio,0,2*Math.PI)
+       pincel.fill();
+    }
+
+    function reset(){
+        pincel.clearRect(0,0,600,400);
+        pincel.fillStyle = "lightgrey";
+        pincel.fillRect(0,0,600,400); 
+
+    }
+
+    var x=0;
+
+    function actu() {
+        reset();
+        dibCir(x,20,10);
+        x++
+    }
+    
+    function objetivo(x,y,color) {
+        dibCir(x,y,30,"red")
+        dibCir(x,y,20,"white")
+        dibCir(x,y,10,"red")
+
+    }
+
+    function pos(maximo) {
+        return Math.floor(Math.random()*maximo);
+    }
+
+    
+
+   function actu() {
+        reset();
+        xRandom = pos(600);
+        yRandom = pos(400);
+        objetivo(xRandom,yRandom);
+        x++
+    }
+
+    setInterval(actu,1000);
+
+    function tiro(evento){
+        var x = evento.pageX - pantalla.offsetLeft
+        var y = evento.pageY - pantalla.offsetTop
+        if ((x < xRandom + 10) &&
+            (x < xRandom - 10) &&
+            (y < yRandom + 10) &&
+            (y < yRandom - 10)) {
+            alert("En el blanco");
+        }
+
+    }
+
+    pantalla.onclick = tiro;
+    
+
+
+
+
+</script> 

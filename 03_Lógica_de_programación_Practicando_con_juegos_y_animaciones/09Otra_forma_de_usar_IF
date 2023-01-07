@@ -1,0 +1,8 @@
+<script>
+    var aprendi = true;
+    if(aprendi) {
+        alert("El instructor queda muy feliz");
+    } else {
+        alert("El instructor no va a desistir hasta que el alumno sea una eminencia en programación");
+    }
+</script>
